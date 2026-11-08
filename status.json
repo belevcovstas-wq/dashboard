@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://google.com",
+    "status": "UP",
+    "code": 200,
+    "ms": 647,
+    "time": "2026-11-05T20:04:54.722459"
+  },
+  {
+    "url": "https://facebook.com",
+    "status": "UP",
+    "code": 200,
+    "ms": 803,
+    "time": "2026-11-05T20:04:55.371980"
+  },
+  {
+    "url": "https://github.com",
+    "status": "UP",
+    "code": 200,
+    "ms": 159,
+    "time": "2026-11-05T20:04:56.176786"
+  },
+  {
+    "url": "https://noserver.com",
+    "status": "DOWN",
+    "code": null,
+    "ms": null,
+    "time": "2026-11-05T20:04:56.337840"
+  }
+]
