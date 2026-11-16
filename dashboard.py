@@ -25,9 +25,11 @@ while True:
     for url in targets:
         result =check(url)
         if result["status"] == "UP":
+            print("------------------------------------------------------------------------------")
             print("🟢", f"url:{url}, status:{result["status"]}, code:{result["code"]} ms:{result["ms"]},Time:{result["time"]}")
         else:
-            print ("🔴", f"url:{url}, status:{result["status"]}, status:{result["code"]}, ms:{result["ms"]}, Time:{result["time"]}") 
+            print("------------------------------------------------------------------------------")
+            print ("🔴", f"url:{url}, status:{result["status"]}, status:{result["code"]}, ms:{result["ms"]}, Time:{result["time"]}")
         results.append(result)
     time.sleep(5)
 
