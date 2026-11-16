@@ -3,28 +3,35 @@
     "url": "https://google.com",
     "status": "UP",
     "code": 200,
-    "ms": 647,
-    "time": "2026-11-05T20:04:54.722459"
+    "ms": 449,
+    "time": "2026-11-14T16:26:05.702993"
   },
   {
     "url": "https://facebook.com",
     "status": "UP",
     "code": 200,
-    "ms": 803,
-    "time": "2026-11-05T20:04:55.371980"
+    "ms": 962,
+    "time": "2026-11-14T16:26:06.155816"
   },
   {
     "url": "https://github.com",
     "status": "UP",
     "code": 200,
-    "ms": 159,
-    "time": "2026-11-05T20:04:56.176786"
+    "ms": 137,
+    "time": "2026-11-14T16:26:07.119820"
   },
   {
     "url": "https://noserver.com",
     "status": "DOWN",
     "code": null,
     "ms": null,
-    "time": "2026-11-05T20:04:56.337840"
+    "time": "2026-11-14T16:26:07.257932"
+  },
+  {
+    "url": "https://noserver1.com",
+    "status": "DOWN",
+    "code": null,
+    "ms": null,
+    "time": "2026-11-14T16:26:17.263917"
   }
 ]
