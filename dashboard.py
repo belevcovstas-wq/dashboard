@@ -7,7 +7,12 @@ import csv
 import os
 
 
-targets = ["https://google.com", "https://facebook.com", "https://github.com","https://noserver.com", "https://noserver1.com"]
+targets = ["https://google.com",
+           "https://facebook.com", 
+           "https://github.com",
+           "https://noserver.com", 
+           "https://noserver1.com"
+           ]
 
 def check(url):
     start = time.time()
@@ -31,17 +36,16 @@ while True:
             print("------------------------------------------------------------------------------")
             print ("🔴", f"url:{url}, status:{result["status"]}, status:{result["code"]}, ms:{result["ms"]}, Time:{result["time"]}")
         results.append(result)
-    time.sleep(5)
 
-with open("status.json", "w") as f:
-    json.dump(results, f, indent=2)
+    with open("status.json", "w") as f:
+        json.dump(results, f, indent=2)
 
-with open("history.csv", "a", newline="") as h:
-    writer = csv.writer(h)
-    for hist in results:
-        writer.writerow([hist["url"], hist["status"], hist["code"], hist["ms"], hist["time"]])
-
-        
+    with open("history.csv", "a", newline="") as h:
+        writer = csv.writer(h)
+        for hist in results:
+            writer.writerow([hist["url"], hist["status"], hist["code"], hist["ms"], hist["time"]])
+        time.sleep(60)
+            
 
 
 
