@@ -7,7 +7,7 @@ import csv
 import os
 
 
-targets = ["https://google.com", "https://facebook.com", "https://github.com","https://noserver.com"]
+targets = ["https://google.com", "https://facebook.com", "https://github.com","https://noserver.com", "https://noserver1.com"]
 
 def check(url):
     start = time.time()
@@ -20,17 +20,20 @@ def check(url):
     except requests.RequestException as e:
         return{"url": url, "status": "DOWN", "code": None, "ms": None, "time": now}
 
-results = []
-for url in targets:
-    result =check(url)
-    if result["status"] == "UP":
-        print("🟢", f"url:{url}, status:{result["status"]}, code:{result["code"]} ms:{result["ms"]},Time:{result["time"]}")
-    else:
-        print ("🔴", f"url:{url}, status:{result["status"]}, status:{result["code"]}, ms:{result["ms"]}, Time:{result["time"]}") 
-    results.append(result)
+while True:
+    results = []
+    for url in targets:
+        result =check(url)
+        if result["status"] == "UP":
+            print("🟢", f"url:{url}, status:{result["status"]}, code:{result["code"]} ms:{result["ms"]},Time:{result["time"]}")
+        else:
+            print ("🔴", f"url:{url}, status:{result["status"]}, status:{result["code"]}, ms:{result["ms"]}, Time:{result["time"]}") 
+        results.append(result)
+    time.sleep(5)
 
 with open("status.json", "w") as f:
     json.dump(results, f, indent=2)
+
 with open("history.csv", "a", newline="") as h:
     writer = csv.writer(h)
     for hist in results:
